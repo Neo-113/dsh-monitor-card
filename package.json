@@ -1,0 +1,44 @@
+{
+  "name": "dsh-monitor-card",
+  "version": "0.2.5",
+  "description": "DSH Web 内置悬浮系统状态卡：CPU/内存/负载 + 每卡 GPU 温度/利用率/显存 + SGLang 引擎 tok/s/KV/排队（宿主 web server 同源路由，:3080，无新端口）。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "package.json"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "3.18.2"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": ">=0.1.2-rc.1 <0.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,20 @@
+# 构建/发布产物（版本号已体现在 package.json 的 version 字段）
+*.tgz
+
+# 本地工作痕迹（冒烟环境、自测输出、boot 快照、cookie jar、探针）
+.smoke/
+.selftest/
+dump-*.txt
+
+# 依赖与包管理器本地状态
+node_modules/
+.pnpm-store/
+
+# 本地 DSH 注册补丁（含本机 web 配置，仓库 开发方案.md 有全文，无需入库）
+cordis.patch.yml
+
+.DS_Store
+
+# 项目过程文档（含本机内网/运行环境细节，公开仓库不入库；本地保留为唯一事实源）
+AGENTS.md
+开发方案.md
