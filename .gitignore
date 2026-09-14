@@ -10,9 +10,6 @@ dump-*.txt
 node_modules/
 .pnpm-store/
 
-# 本地 DSH 注册补丁（含本机 web 配置，仓库 开发方案.md 有全文，无需入库）
-cordis.patch.yml
-
 .DS_Store
 
 # 项目过程文档（含本机内网/运行环境细节，公开仓库不入库；本地保留为唯一事实源）

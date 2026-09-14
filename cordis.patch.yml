@@ -1,0 +1,14 @@
+# dsh-monitor-card bundle patch: mounts both halves in one row.
+#   - host:    GET /dsh-monitor-card/status on the DSH web server (:3080)
+#   - client:  shell.overlay floating card (dsh.client.platform = web)
+#
+# NOTE: a patch's config REPLACES the row's config wholesale (no deep merge),
+# so the full key set is restated here. Edit values, keep every key.
+- insert:
+    - id: dsh-monitor-card
+      name: 'dsh-monitor-card'
+      config:
+        pollMs: 1000
+        showPower: false
+        engineUrl: http://127.0.0.1:30000/metrics # SGLang default port; edit per local deployment
+        smiPath: nvidia-smi

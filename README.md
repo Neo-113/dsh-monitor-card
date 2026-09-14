@@ -15,10 +15,10 @@ DSH Web GUI 常驻悬浮系统状态卡（右下角、可拖拽、右下角拉�
 
 ```bash
 # git 通道（推荐，直接装本仓库 tag / main）
-dsh plugin --profile web add github:Neo-113/dsh-monitor-card#v0.2.6
+dsh plugin --profile web add github:Neo-113/dsh-monitor-card#v0.2.7
 
 # tarball 通道（本地 tgz：本仓库 pnpm pack，或从 Releases 下载）
-dsh plugin --profile web add file:<tgz 所在本地路径>/dsh-monitor-card-0.2.6.tgz
+dsh plugin --profile web add file:<tgz 所在本地路径>/dsh-monitor-card-0.2.7.tgz
 ```
 
 （npm 通道：本包未发布 npm，不适用。）
