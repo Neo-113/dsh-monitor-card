@@ -1,6 +1,6 @@
 {
   "name": "dsh-monitor-card",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "DSH Web 内置悬浮系统状态卡：CPU/内存/负载 + 每卡 GPU 温度/利用率/显存 + SGLang 引擎 tok/s/KV/排队（宿主 web server 同源路由，:3080，无新端口）。",
   "type": "module",
   "main": "index.js",

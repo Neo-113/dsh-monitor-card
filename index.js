@@ -6,7 +6,7 @@
  *   - GPU:  nvidia-smi dual query (gpu-pulse design: parallel stats+name,
  *           4s timeout, 5min reprobe circuit after failure)
  *   - host: /proc/stat diff on a 1s latched tick, /proc/meminfo, /proc/loadavg
- *   - engine: SGLang :18080/metrics (1.5s timeout, degrades to online:false,
+ *   - engine: SGLang :30000/metrics (1.5s timeout, degrades to online:false,
  *             never throws)
  *
  * Plugin contract (dsh 0.1.x, Cordis loader):
@@ -23,7 +23,7 @@
  *     are both effect cleanups, nothing manual.
  *
  * Engine metric mapping — FROZEN from a live scrape of
- * 127.0.0.1:18080/metrics on 2026-09-14 (a local sglang 0.5.x build, 106 unique
+ * a local sglang 0.5.x /metrics endpoint on 2026-09-14 (106 unique
  * metric names; all carry the `sglang:` prefix):
  *   tokPerSec = sglang:gen_throughput            (gauge, first series)
  *               fallback: 1s delta of sglang:generation_tokens_total
@@ -52,7 +52,7 @@ export const inject = [];
 export const Config = Schema.object({
   pollMs: Schema.natural().min(500).default(1000),
   showPower: Schema.boolean().default(false),
-  engineUrl: Schema.string().default('http://127.0.0.1:18080/metrics'),
+  engineUrl: Schema.string().default('http://127.0.0.1:30000/metrics'), /* SGLang default port */
   smiPath: Schema.string().default('nvidia-smi'),
 });
 
