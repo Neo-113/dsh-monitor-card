@@ -11,7 +11,7 @@ DSH Web GUI 常驻悬浮系统状态卡（右下角、可拖拽、右下角拉�
 
 **适配宿主**：DSH `v0.1.5-rc.2`（2026-09-14 实测）；Node `^22.19 || >=24`（与 [dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide) 基线一致）。小版本升级（尤其 0.1.5 正式版）未验证——升级宿主前请先在新版本上以 `--dump-config` 确认插件行无 FAILED、`shell.overlay` 槽仍在。
 
-## 安装（他人安装方式，与 [dsh-plugin-guide](https://github.com/PerryLink/dsh-plugin-guide)「Install & uninstall」三通道口径一致）
+## 安装
 
 ```bash
 # git 通道（推荐，直接装本仓库 tag / main）
